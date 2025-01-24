@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  all_test:
+    image: pw_test:v2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+    command: /bin/sh -c "pytest"
+    working_dir: /usr/workspace
+    environment:
+    - CI=true
+
