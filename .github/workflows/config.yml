@@ -1,0 +1,32 @@
+name: UI Tests
+
+on: workflow_dispatch
+
+jobs:
+  ui-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run UI-tests via docker-compose
+        env:
+          CI: ${{ secrets.CI }}
+          BASE_URL: ${{ secrets.BASE_URL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          docker-compose up --exit-code-from all_test || true
+
+
+      - name: Generate Allure report
+        run: |
+          sudo docker-compose run all_test /bin/sh -c "allure generate allure-results --clean -o allure-report"
+
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: true
