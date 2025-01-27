@@ -1,8 +1,6 @@
 FROM python:3.12-bookworm
 
-RUN apk update && \
-    apk add openjdk11-jre curl tar && \
-    tar xf /home/user/Downloads/allure-2.29.0.tgz -C /home/user/tools
+RUN tar xf /home/user/Downloads/allure-2.29.0.tgz -C /home/user/tools
 
 WORKDIR /usr/workspace
 COPY ./requirements.txt /usr/workspace
