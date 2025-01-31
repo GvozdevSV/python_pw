@@ -20,4 +20,10 @@ class CartPage(BasePage):
                'Отсутствует кнопка продолжить покупки').to_be_visible()
         expect(self.page.locator(self.locators.CHECKOUT_BUTTON).first, 'Отсутствует оформления покупки').to_be_visible()
 
+    @allure.step('Получение значений товара из корзины')
+    def get_product_values_from_cart_page(self):
+        title = self.page.locator(self.locators.PRODUCT_TITLES).text_content()
+        description = self.page.locator(self.locators.DESCRIPTIONS).text_content()
+        prise = self.page.locator(self.locators.PRISES).text_content()
+        return title, description, prise
 
