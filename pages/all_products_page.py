@@ -27,4 +27,4 @@ class AllProductsPage(BasePage):
         assert len(all_products_prises) > 1, "На странице меньше двух цен товаров"
         all_to_cart_buttons = self.page.locator(self.locators.ADD_TO_CART_BUTTONS).all()
         assert len(all_to_cart_buttons) > 1, "На странице меньше двух кнопок добавления товаров в корзину"
-        expect(self.page.locator(self.locators.CART_ICON), 'Отсутствует иконка корзины').to_have_text('Products')
+        expect(self.page.locator(self.locators.CART_ICON), 'Отсутствует иконка корзины').to_be_visible()
