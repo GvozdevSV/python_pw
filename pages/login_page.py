@@ -28,3 +28,15 @@ class LoginPage(BasePage):
     @allure.step('Проверка авторизации')
     def check_login(self):
         expect(self.page.get_by_text('Sauce Labs Backpack'), "Пользователь не авторизовался").to_be_visible()
+
+    @allure.step('Простая авторизация')
+    def simple_login(self, login, password):
+        self.page.goto(Urls.enter_url)
+        self.page.get_by_placeholder(self.locators.LOGIN_FIELD).fill(login)
+        self.page.get_by_placeholder(self.locators.PASSWORD_FIELD).fill(password)
+        self.page.locator(self.locators.SUBMIT_BUTTON).click()
+
+    @allure.step('Получение текста ошибки при авторизации')
+    def get_error(self):
+        return self.page.locator(self.locators.ERROR).text_content()
+
