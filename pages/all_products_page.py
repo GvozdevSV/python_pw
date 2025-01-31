@@ -28,3 +28,13 @@ class AllProductsPage(BasePage):
         all_to_cart_buttons = self.page.locator(self.locators.ADD_TO_CART_BUTTONS).all()
         assert len(all_to_cart_buttons) > 1, "На странице меньше двух кнопок добавления товаров в корзину"
         expect(self.page.locator(self.locators.CART_ICON), 'Отсутствует иконка корзины').to_be_visible()
+
+    @allure.step('Добавление случайного товара в корзину')
+    def add_random_product_to_cart(self):
+        all_to_cart_buttons = self.page.locator(self.locators.ADD_TO_CART_BUTTONS).all()
+        random.choice(all_to_cart_buttons).click()
+
+    @allure.step('Переход в корзину')
+    def go_to_cart(self):
+        self.page.locator(self.locators.CART_ICON).click()
+
