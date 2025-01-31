@@ -12,8 +12,8 @@ load_dotenv()
 class TestLoginPage:
 
     @allure.title('Корректная авторизация')
-    def test_login(self, page):
-        login_page = LoginPage(page)
+    def test_login(self, browser_context):
+        login_page = LoginPage(browser_context)
         login_page.go_to_login_page()
         login_page.fil_login_field('standard_user')
         login_page.fil_password_field(os.getenv('PASSWORD'))
