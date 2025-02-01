@@ -38,3 +38,14 @@ class AllProductsPage(BasePage):
     def go_to_cart(self):
         self.page.locator(self.locators.CART_ICON).click()
 
+    @allure.step('Добавление первого и последнего товара в корзину')
+    def add_first_and_last_product_to_cart(self):
+        self.page.locator(self.locators.ADD_TO_CART_BUTTONS).first.click()
+        assert self.get_cart_badge_value() == '1', "Добавление первого товара не отобразилось на иконке корзины"
+        self.page.locator(self.locators.ADD_TO_CART_BUTTONS).last.click()
+        assert self.get_cart_badge_value() == '2', "Добавление второго товара не отобразилось на иконке корзины"
+
+    @allure.step('Получение имен товаров добавленных в корзину')
+    def get_add_to_cart_products_name(self):
+        return self.page.locator(self.locators.ADDED_PRODUCTS_NAME).all_text_contents()
+
