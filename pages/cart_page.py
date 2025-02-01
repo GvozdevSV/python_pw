@@ -27,3 +27,7 @@ class CartPage(BasePage):
         prise = self.page.locator(self.locators.PRISES).text_content()
         return title, description, prise
 
+    @allure.step('Получение имен товаров из корзины')
+    def get_all_product_names_from_cart_page(self):
+        return self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+
