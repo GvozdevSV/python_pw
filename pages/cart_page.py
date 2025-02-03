@@ -37,3 +37,7 @@ class CartPage(BasePage):
     def delete_random_product(self):
         all_products = self.page.locator(self.locators.REMOVE_BUTTONS).all()
         random.choice(all_products).click()
+
+    @allure.step('Нажатие кнопки Вернуться к покупкам')
+    def press_continue_shopping_button(self):
+        self.page.locator(self.locators.CONTINUE_SHOPPING_BUTTON).click()

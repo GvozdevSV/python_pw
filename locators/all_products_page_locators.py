@@ -9,3 +9,4 @@ class AllProductsPageLocators:
     ADD_TO_CART_BUTTONS = 'button[class="btn btn_primary btn_small btn_inventory "]'
     CART_ICON = 'div[class="shopping_cart_container"]'
     ADDED_PRODUCTS_NAME = '//button[@class="btn btn_secondary btn_small btn_inventory "]//ancestor::div[@class="inventory_item"]//div[@class="inventory_item_name "]'
+    REMOVE_BUTTONS = 'button[class="btn btn_secondary btn_small btn_inventory "]'
