@@ -49,3 +49,7 @@ class AllProductsPage(BasePage):
     def get_add_to_cart_products_name(self):
         return self.page.locator(self.locators.ADDED_PRODUCTS_NAME).all_text_contents()
 
+    @allure.step('Удаление товара по индексу')
+    def delete_product_from_all_product_page_by_index(self, index):
+        self.page.locator(self.locators.REMOVE_BUTTONS).nth(index).click()
+
