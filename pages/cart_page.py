@@ -41,3 +41,7 @@ class CartPage(BasePage):
     @allure.step('Нажатие кнопки Вернуться к покупкам')
     def press_continue_shopping_button(self):
         self.page.locator(self.locators.CONTINUE_SHOPPING_BUTTON).click()
+
+    @allure.step('Нажатие кнопки Перейти к оформлению')
+    def press_checkout_button(self):
+        self.page.locator(self.locators.CHECKOUT_BUTTON).click()
