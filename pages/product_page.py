@@ -30,3 +30,8 @@ class ProductPage(BasePage):
     def press_add_to_cart_button(self):
         self.page.locator(self.locators.ADD_TO_CART_BUTTON).click()
 
+    @allure.step('Нажатие кнопки удаления товара из корзины')
+    def press_remove_product_button(self):
+        self.page.locator(self.locators.REMOVE_BUTTON).click()
+
+
