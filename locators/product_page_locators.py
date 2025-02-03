@@ -7,4 +7,5 @@ class ProductPageLocators:
     PRISE = 'div[class="inventory_details_price"]'
     ADD_TO_CART_BUTTON = 'button[name="add-to-cart"]'
     BACK_TO_PRODUCT_BUTTON = 'button[id="back-to-products"]'
+    REMOVE_BUTTON = 'button[class="btn btn_secondary btn_small btn_inventory"]'
 

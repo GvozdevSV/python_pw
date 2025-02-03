@@ -53,3 +53,6 @@ class AllProductsPage(BasePage):
     def delete_product_from_all_product_page_by_index(self, index):
         self.page.locator(self.locators.REMOVE_BUTTONS).nth(index).click()
 
+    @allure.step('Переход в карточку товара по названию товара')
+    def go_to_product_cart_by_product_name(self, product_name):
+        self.page.locator(self.locators.PRODUCT_TITLES).get_by_text(product_name).click()
