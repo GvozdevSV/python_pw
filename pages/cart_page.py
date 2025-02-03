@@ -1,3 +1,5 @@
+import random
+
 import allure
 
 from locators.cart_page_locators import CartPageLocators
@@ -31,3 +33,7 @@ class CartPage(BasePage):
     def get_all_product_names_from_cart_page(self):
         return self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
 
+    @allure.step('Удаление случайного товара из козины')
+    def delete_random_product(self):
+        all_products = self.page.locator(self.locators.REMOVE_BUTTONS).all()
+        random.choice(all_products).click()
