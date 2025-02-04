@@ -48,4 +48,8 @@ class TestAllProductsPage:
         all_products_page = AllProductsPage(browser_context)
         all_products_page.check_filter_dropdown()
 
+    @allure.title('Фильтрация товаров по имени')
+    def test_filter_products_by_name(self, login, browser_context):
+        all_products_page = AllProductsPage(browser_context)
+        all_products_page.check_filter_products_by_name()
 

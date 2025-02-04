@@ -71,4 +71,14 @@ class AllProductsPage(BasePage):
         assert items_text == ['Name (A to Z)', 'Name (Z to A)', 'Price (low to high)', 'Price (high to low)'], \
             "Есть не все параметры фильтрации"
 
-
+    @allure.step('Проверка фильтрации товаров по имени')
+    def check_filter_products_by_name(self):
+        products_before = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+        self.page.locator(self.locators.SELECT_FILTER).click()
+        self.page.locator(self.locators.SELECT_CONTAINER).select_option("za")
+        products_after = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+        assert products_after == sorted(products_before, reverse=True), \
+            "Обратная сортировка по имени срабатывает не корректно"
+        self.page.locator(self.locators.SELECT_CONTAINER).select_option("az")
+        products_after = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+        assert products_after == sorted(products_before), "Сортировка по имени срабатывает не корректно"
