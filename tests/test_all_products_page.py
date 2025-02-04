@@ -43,3 +43,9 @@ class TestAllProductsPage:
         assert in_cart_after != in_cart_before, "Количество товаров в корзине не изменилось"
         assert int(in_badge_after) == int(in_badge_before) - 1, "Количество товаров на бейдже не уменьшилось на один"
 
+    @allure.title('Содержание дропдауна фильтрации страницы все товары')
+    def test_product_filtering_dropdown_content(self, login, browser_context):
+        all_products_page = AllProductsPage(browser_context)
+        all_products_page.check_filter_dropdown()
+
+
