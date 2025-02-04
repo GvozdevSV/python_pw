@@ -64,3 +64,11 @@ class AllProductsPage(BasePage):
         prises = self.page.locator(self.locators.ADDED_PRODUCTS_PRISES).all_text_contents()
         return names, descriptions, prises
 
+    @allure.step('Проверка содержания дропдауна фильтрации')
+    def check_filter_dropdown(self):
+        self.page.locator(self.locators.SELECT_FILTER).click()
+        items_text = self.page.locator(self.locators.FILTER_ITEMS).all_text_contents()
+        assert items_text == ['Name (A to Z)', 'Name (Z to A)', 'Price (low to high)', 'Price (high to low)'], \
+            "Есть не все параметры фильтрации"
+
+

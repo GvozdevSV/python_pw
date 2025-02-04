@@ -12,3 +12,5 @@ class AllProductsPageLocators:
     ADDED_PRODUCTS_DESCRIPTION = '//button[@class="btn btn_secondary btn_small btn_inventory "]//ancestor::div[@class="inventory_item"]//div[@class="inventory_item_desc"]'
     ADDED_PRODUCTS_PRISES = '//button[@class="btn btn_secondary btn_small btn_inventory "]//ancestor::div[@class="inventory_item"]//div[@class="inventory_item_price"]'
     REMOVE_BUTTONS = 'button[class="btn btn_secondary btn_small btn_inventory "]'
+    SELECT_FILTER = 'span[class="select_container"]'
+    FILTER_ITEMS = 'option[value]'
