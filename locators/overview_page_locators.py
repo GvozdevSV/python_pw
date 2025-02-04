@@ -14,3 +14,5 @@ class OverviewPageLocators:
     DESCRIPTIONS = '//div[@data-test="inventory-item-desc"]'
     PRISES = 'div[class="inventory_item_price"]'
 
+    COMPLETE_HEADER = 'h2[class="complete-header"]'
+    COMPLETE_TEXT = 'div[class="complete-text"]'
