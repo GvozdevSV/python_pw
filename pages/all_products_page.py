@@ -74,7 +74,6 @@ class AllProductsPage(BasePage):
     @allure.step('Проверка фильтрации товаров по имени')
     def check_filter_products_by_name(self):
         products_before = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
-        self.page.locator(self.locators.SELECT_FILTER).click()
         self.page.locator(self.locators.SELECT_CONTAINER).select_option("za")
         products_after = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
         assert products_after == sorted(products_before, reverse=True), \
@@ -82,3 +81,14 @@ class AllProductsPage(BasePage):
         self.page.locator(self.locators.SELECT_CONTAINER).select_option("az")
         products_after = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
         assert products_after == sorted(products_before), "Сортировка по имени срабатывает не корректно"
+
+    @allure.step('Проверка фильтрации товаров по цене')
+    def check_filter_products_by_prise(self):
+        products_before = [float(item[1:]) for item in self.page.locator(self.locators.PRISES).all_text_contents()]
+        self.page.locator(self.locators.SELECT_CONTAINER).select_option("hilo")
+        products_after = [float(item[1:]) for item in self.page.locator(self.locators.PRISES).all_text_contents()]
+        assert products_after == sorted(products_before, reverse=True), \
+            "Обратная сортировка по цене срабатывает не корректно"
+        self.page.locator(self.locators.SELECT_CONTAINER).select_option("lohi")
+        products_after = [float(item[1:]) for item in self.page.locator(self.locators.PRISES).all_text_contents()]
+        assert products_after == sorted(products_before), "Сортировка по цене срабатывает не корректно"
