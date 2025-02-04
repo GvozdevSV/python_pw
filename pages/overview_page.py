@@ -26,3 +26,7 @@ class OverviewPage(BasePage):
         expect(self.page.locator(self.locators.TOTAL_LABEL), "Отсутствует подзаголовок Итого").to_contain_text('Total: $')
         expect(self.page.locator(self.locators.FINISH_BUTTON), "Отсутствует кнопка Закончить").to_be_visible()
         expect(self.page.locator(self.locators.CANSEL_BUTTON), "Отсутствует кнопка Отменить").to_be_visible()
+
+    @allure.step('Получение суммы товаров до учета налогов')
+    def get_item_total_prise(self):
+        return float(self.page.locator(self.locators.SUBTOTAL_LABEL).text_content()[13:])

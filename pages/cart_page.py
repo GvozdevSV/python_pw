@@ -45,3 +45,9 @@ class CartPage(BasePage):
     @allure.step('Нажатие кнопки Перейти к оформлению')
     def press_checkout_button(self):
         self.page.locator(self.locators.CHECKOUT_BUTTON).click()
+
+    @allure.step('Получение всех цен товаров в корзине')
+    def get_all_product_prises(self):
+        values = self.page.locator(self.locators.PRISES).all_text_contents()
+        return [float(item[1:]) for item in values]
+
