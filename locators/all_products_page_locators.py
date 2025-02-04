@@ -14,3 +14,4 @@ class AllProductsPageLocators:
     REMOVE_BUTTONS = 'button[class="btn btn_secondary btn_small btn_inventory "]'
     SELECT_FILTER = 'span[class="select_container"]'
     FILTER_ITEMS = 'option[value]'
+    SELECT_CONTAINER = 'select[class="product_sort_container"]'
