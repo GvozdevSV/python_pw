@@ -9,6 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Prepare Allure environment
+        run: |
+          mkdir -p allure-results
+
       - name: Run UI-tests via docker-compose
         env:
           CI: ${{ secrets.CI }}
