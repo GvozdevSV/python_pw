@@ -56,3 +56,29 @@ class AllProductsPage(BasePage):
     @allure.step('Переход в карточку товара по названию товара')
     def go_to_product_cart_by_product_name(self, product_name):
         self.page.locator(self.locators.PRODUCT_TITLES).get_by_text(product_name).click()
+
+    @allure.step('Получение всех отображаемых в корзине полей выбранных товаров')
+    def get_add_to_cart_products_fields(self):
+        names = self.page.locator(self.locators.ADDED_PRODUCTS_NAME).all_text_contents()
+        descriptions = self.page.locator(self.locators.ADDED_PRODUCTS_DESCRIPTION).all_text_contents()
+        prises = self.page.locator(self.locators.ADDED_PRODUCTS_PRISES).all_text_contents()
+        return names, descriptions, prises
+
+    @allure.step('Проверка содержания дропдауна фильтрации')
+    def check_filter_dropdown(self):
+        self.page.locator(self.locators.SELECT_FILTER).click()
+        items_text = self.page.locator(self.locators.FILTER_ITEMS).all_text_contents()
+        assert items_text == ['Name (A to Z)', 'Name (Z to A)', 'Price (low to high)', 'Price (high to low)'], \
+            "Есть не все параметры фильтрации"
+
+    @allure.step('Проверка фильтрации товаров по имени')
+    def check_filter_products_by_name(self):
+        products_before = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+        self.page.locator(self.locators.SELECT_FILTER).click()
+        self.page.locator(self.locators.SELECT_CONTAINER).select_option("za")
+        products_after = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+        assert products_after == sorted(products_before, reverse=True), \
+            "Обратная сортировка по имени срабатывает не корректно"
+        self.page.locator(self.locators.SELECT_CONTAINER).select_option("az")
+        products_after = self.page.locator(self.locators.PRODUCT_TITLES).all_text_contents()
+        assert products_after == sorted(products_before), "Сортировка по имени срабатывает не корректно"
