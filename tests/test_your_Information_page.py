@@ -16,3 +16,12 @@ class TestYourInformationPage:
         cart_page.press_checkout_button()
         your_information_page = YourInformationPage(browser_context)
         your_information_page.check_your_information_page()
+
+    @allure.title('Проверка заполнения полей страницы Информация о покупателе')
+    def test_field_your_information_page(self, login, browser_context):
+        all_products_page = AllProductsPage(browser_context)
+        all_products_page.go_to_cart()
+        cart_page = CartPage(browser_context)
+        cart_page.press_checkout_button()
+        your_information_page = YourInformationPage(browser_context)
+        your_information_page.check_fill_your_information_fields()
