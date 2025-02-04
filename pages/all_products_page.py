@@ -56,3 +56,11 @@ class AllProductsPage(BasePage):
     @allure.step('Переход в карточку товара по названию товара')
     def go_to_product_cart_by_product_name(self, product_name):
         self.page.locator(self.locators.PRODUCT_TITLES).get_by_text(product_name).click()
+
+    @allure.step('Получение всех отображаемых в корзине полей выбранных товаров')
+    def get_add_to_cart_products_fields(self):
+        names = self.page.locator(self.locators.ADDED_PRODUCTS_NAME).all_text_contents()
+        descriptions = self.page.locator(self.locators.ADDED_PRODUCTS_DESCRIPTION).all_text_contents()
+        prises = self.page.locator(self.locators.ADDED_PRODUCTS_PRISES).all_text_contents()
+        return names, descriptions, prises
+

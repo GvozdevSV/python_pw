@@ -9,3 +9,8 @@ class OverviewPageLocators:
 
     FINISH_BUTTON = 'button[data-test="finish"]'
     CANSEL_BUTTON = 'button[data-test="cancel"]'
+
+    PRODUCT_TITLES = 'div[data-test="inventory-item-name"]'
+    DESCRIPTIONS = '//div[@data-test="inventory-item-desc"]'
+    PRISES = 'div[class="inventory_item_price"]'
+
