@@ -38,3 +38,16 @@ class OverviewPage(BasePage):
         prises = self.page.locator(self.locators.PRISES).all_text_contents()
         return names, descriptions, prises
 
+    @allure.step('Нажатие кнопки закончить')
+    def press_finish_button(self):
+        self.page.locator(self.locators.FINISH_BUTTON).click()
+
+    @allure.step('Проверка текста на заключительной странице')
+    def check_complete_text(self):
+        expect(self.page.locator(self.locators.COMPLETE_HEADER),
+               "Отсутствует Заключительный заголовок").to_contain_text('Thank you for your order!')
+        expect(self.page.locator(self.locators.COMPLETE_TEXT),
+               "Отсутствует Заключительный текст").to_contain_text(
+            'Your order has been dispatched, and will arrive just as fast as the pony can get there!')
+
+
