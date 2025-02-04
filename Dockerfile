@@ -1,13 +1,15 @@
-FROM python:3.14.0a1-alpine3.20
+FROM python:3.12-bookworm
 
+# Устанавливаем необходимые зависимости для Allure
+RUN apt-get update && \
+    apt-get install -y curl unzip && \
+    rm -rf /var/lib/apt/lists/*
 
-# Установка Allure
-RUN apk update && \
-    apk add openjdk11-jre curl tar && \
-    curl -o allure-2.13.8.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz && \
-    tar -zxvf allure-2.13.8.tgz -C /opt/ && \
-    ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure && \
-    rm allure-2.13.8.tgz
+# Устанавливаем Allure Commandline
+RUN curl -o allure-2.24.0.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.24.0/allure-commandline-2.24.0.tgz && \
+    tar -zxvf allure-2.24.0.tgz -C /opt/ && \
+    ln -s /opt/allure-2.24.0/bin/allure /usr/bin/allure && \
+    rm allure-2.24.0.tgz
 
 WORKDIR /usr/workspace
 COPY ./requirements.txt /usr/workspace
