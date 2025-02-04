@@ -53,3 +53,8 @@ class TestAllProductsPage:
         all_products_page = AllProductsPage(browser_context)
         all_products_page.check_filter_products_by_name()
 
+    @allure.title('Фильтрация товаров по цене')
+    def test_filter_products_by_prise(self, login, browser_context):
+        all_products_page = AllProductsPage(browser_context)
+        all_products_page.check_filter_products_by_prise()
+
