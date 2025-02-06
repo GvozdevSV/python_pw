@@ -1,0 +1,402 @@
+{
+  "ff4b5f93a18383d7d50687e520f42ad8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1b3dacd0d83eeea7",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/1b3dacd0d83eeea7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824149161,
+        "stop" : 1738824149354,
+        "duration" : 193
+      }
+    } ]
+  },
+  "5112e4c2f4173a640db40f6025c7ebf7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e7a74ea4f46518cd",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/e7a74ea4f46518cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824144729,
+        "stop" : 1738824145048,
+        "duration" : 319
+      }
+    } ]
+  },
+  "ce18b259895b74a91f02e836ff4ba3ee" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bcf7d4605257624b",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/bcf7d4605257624b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824141753,
+        "stop" : 1738824142082,
+        "duration" : 329
+      }
+    } ]
+  },
+  "b52d84dd4f16113974b34e0ee3a8c22b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5a63227c488f0f8e",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/5a63227c488f0f8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824148195,
+        "stop" : 1738824148289,
+        "duration" : 94
+      }
+    } ]
+  },
+  "125c5a63d5314a7cf7ec0119b2067f28" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9ff34275bc9037d6",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/9ff34275bc9037d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824133641,
+        "stop" : 1738824133712,
+        "duration" : 71
+      }
+    } ]
+  },
+  "5aab0a5269684fdcb10a43643e71130f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a5171e56896fecf8",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/a5171e56896fecf8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824147013,
+        "stop" : 1738824147382,
+        "duration" : 369
+      }
+    } ]
+  },
+  "3c779999a209d1dc27adabe4d61acaff" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3ba26a0fcaac0031",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/3ba26a0fcaac0031",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824140910,
+        "stop" : 1738824141290,
+        "duration" : 380
+      }
+    } ]
+  },
+  "0ca5a0e81b2921d5ea2498ff60558445" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3f42268a9709bbce",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/3f42268a9709bbce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824135515,
+        "stop" : 1738824135849,
+        "duration" : 334
+      }
+    } ]
+  },
+  "c8fa90c0eb1252ec167eb4a4a973de5f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e8ca2b38215dece8",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/e8ca2b38215dece8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824140248,
+        "stop" : 1738824140459,
+        "duration" : 211
+      }
+    } ]
+  },
+  "a8e24fba3a0518248a49d3a1e13f0760" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1d828ab3bd4ba1ac",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/1d828ab3bd4ba1ac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824142531,
+        "stop" : 1738824142861,
+        "duration" : 330
+      }
+    } ]
+  },
+  "9beec82c6d0c7ea3a95ba5895341587e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "744f3fdb37360157",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/744f3fdb37360157",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824134529,
+        "stop" : 1738824134704,
+        "duration" : 175
+      }
+    } ]
+  },
+  "a0315921df14aa035a3012b4afddf58e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "faccc2a2cd818276",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/faccc2a2cd818276",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824137528,
+        "stop" : 1738824137592,
+        "duration" : 64
+      }
+    } ]
+  },
+  "b9c70e5255117679a8f7d90f5d34dd35" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "83d35c7b959804a7",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/83d35c7b959804a7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824145862,
+        "stop" : 1738824146195,
+        "duration" : 333
+      }
+    } ]
+  },
+  "54ad2ae19df43fff3ef7ade4e5fa6f7f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "73913a453109a6b",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/73913a453109a6b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824152013,
+        "stop" : 1738824152129,
+        "duration" : 116
+      }
+    } ]
+  },
+  "9c914ca5f1b261ebd4c90806cd0db967" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5f5015dc65f4b202",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/5f5015dc65f4b202",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824139299,
+        "stop" : 1738824139430,
+        "duration" : 131
+      }
+    } ]
+  },
+  "7924bdf5fec4558a17ef15ae999e02b8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "359f1d068272fc3a",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/359f1d068272fc3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824143680,
+        "stop" : 1738824143922,
+        "duration" : 242
+      }
+    } ]
+  },
+  "1dec71565abf4a2230e9001a473473f8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a89d2facf565cd2c",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/a89d2facf565cd2c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824150195,
+        "stop" : 1738824150544,
+        "duration" : 349
+      }
+    } ]
+  },
+  "5886f70a75ac03a0da780e2564da93d0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9880f12a4abbe0e9",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/9880f12a4abbe0e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824136667,
+        "stop" : 1738824136724,
+        "duration" : 57
+      }
+    } ]
+  },
+  "ba6d7444ad0977d8e85d0ffe78ff439f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4cb80d75cac140f0",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/4cb80d75cac140f0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824152945,
+        "stop" : 1738824153431,
+        "duration" : 486
+      }
+    } ]
+  },
+  "873ca33d74abaed14fd603bb6ef14896" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b6924c5d80a76081",
+      "reportUrl" : "https://GvozdevSV.github.io/python_pw/10//#testresult/b6924c5d80a76081",
+      "status" : "passed",
+      "time" : {
+        "start" : 1738824138413,
+        "stop" : 1738824138477,
+        "duration" : 64
+      }
+    } ]
+  }
+}
