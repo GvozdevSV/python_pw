@@ -13,7 +13,7 @@ jobs:
       - name: Установка Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.12"
 
       - name: Установка зависимостей
         run: |
@@ -37,17 +37,14 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Генерация Allure HTML-отчёта
-        uses: simple-elf/allure-report-action@master
+      - name: Allure Report action
+        uses: simple-elf/allure-report-action@v1.6
         if: always()
         with:
           allure_results: allure-results
           allure_history: allure-history
-          allure_report: allure-report
-          gh_pages: gh-pages
-          ref: gh-pages
-          path: gh-pages
-          keep_reports: 30
+          keep_reports: 50
+        continue-on-error: true
 
       - name: Commit allure_report to Github Pages
         if: always()
