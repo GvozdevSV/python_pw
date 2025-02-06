@@ -35,13 +35,31 @@ jobs:
           name: allure-results
           path: allure-results
 
-      - name: Генерация Allure HTML-отчёта
-        run: |
-          pip install allure-pytest
-          allure generate allure-results -o allure-report --clean
+      - name: Get Allure history
+        uses: actions/checkout@v4.2.2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
 
-      - name: Публикация Allure-отчёта в GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Генерация Allure HTML-отчёта
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          allure_report: allure-report
+          gh_pages: gh-pages
+          ref: gh-pages
+          path: gh-pages
+          keep_reports: 30
+
+      - name: Commit allure_report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.CI_TOKEN }}
-          publish_dir: allure-report
+          PUBLISH_BRANCH: gh-pages
+          publish_dir: allure-history
+
